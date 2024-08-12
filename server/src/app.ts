@@ -22,8 +22,7 @@ import { rateLimit } from "express-rate-limit";
 
 dotenv.config();
 const PORT: number = parseInt(process.env.PORT as string, 10) || 5000;
-const HOST: string =
-  process.env.NODE_ENV?.trim() === "development" ? "localhost" : "0.0.0.0.";
+const HOST: string = process.env.HOST || "localhost";
 
 const app: Express = express();
 
